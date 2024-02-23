@@ -1,0 +1,219 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #fff;
+}
+
+#nav{
+    background: #000;
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+}
+
+#nav .logo-name{
+    color: #1A80F8;
+    font-weight: 1000;
+    margin-left: 2rem;
+    font-size: 27px;
+    font-family: "Intel", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+#nav .nav-links{
+    gap: 3rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: auto;
+    left: 0;
+
+}
+
+#nav .nav-links #ul{
+    gap: 3rem;
+    display: flex;
+}
+
+#nav .nav-links #ul  a{
+    text-decoration: none;
+}
+
+#nav .nav-links .fa-xmark{
+    font-size: 20px;
+    display: none;
+    color: #1A80F8;
+    cursor: pointer;
+}
+
+#nav .fa-bars{
+    display: none;
+    color: #1A80F8;
+    font-size: 20px;
+    transition: 0.5s;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+#nav .nav-links #ul a li{
+    color: #1A80F8;
+    font-size: 16px;
+    text-transform: uppercase;
+    list-style: none;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-weight:700;
+    font-family: sans-serif;;
+}
+
+#nav .nav-links #ul a li:hover{
+     transform: scale(1.05);
+     color: #fff;
+}
+
+#nav .nav-links a {
+    text-decoration: none;
+}
+
+#nav .nav-links a .button{
+    background-color: #1A80F8;
+    color: #fff;
+    padding: 8px 15px;
+    font-size: clamp(0.8125rem, 0.6563rem + 0.5vw, 0.9375rem);
+    border-radius: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    margin-right: 2rem;
+}
+
+#nav .nav-links a .button:hover{
+    transform: scale(1.05);
+}
+
+
+@media screen and (max-width: 1300px){
+    #nav .nav-links{
+        position: absolute;
+        background-color: #1f2024;
+        height: 100vh;
+        width: 20%;
+        top: 0;
+        flex-direction: column;
+        transition: 0.5s;
+    }
+    
+    #nav .fa-bars{
+        display: flex;
+        color: #1A80F8;
+        font-size: 20px;
+        margin-left: auto;
+        margin-right: 0;
+    }
+    
+    
+    #nav .nav-links .fa-xmark{
+        margin-top: 3rem;
+        display: flex;
+        color: #1A80F8;
+        position: relative;
+        margin-left: 10rem;
+    }
+
+    #nav .nav-links .fa-xmark::after{
+        content: "";
+        position: absolute;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        border: 1px solid #1A80F8;
+        top: -0.7rem;
+        left: -0.8rem;
+        box-shadow: 0px 0px 3px #3336e0;
+    }
+    
+    
+    
+    #nav .nav-links #ul{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #nav .nav-links a .button{
+        margin-right: 0;
+    }
+
+    #nav .fa-bars{
+        margin-right: 1rem;
+    }
+}
+
+@media only screen and (max-width: 1175px){
+
+
+    #nav .fa-bars{
+     display: flex;
+     color: #1A80F8;
+     font-size: 20px;
+     margin-left: auto;
+ }
+ 
+  #nav .nav-links .fa-xmark{
+     margin-top: 3rem;
+     display: flex;
+     color: #1A80F8;
+     position: relative;
+     margin-left: 70%;
+ }
+
+ #nav .nav-links .fa-xmark::after{
+     content: "";
+     position: absolute;
+     width: 2.5rem;
+     height: 2.5rem;
+     border-radius: 50%;
+     border: 1px solid #1A80F8;
+     top: -0.7rem;
+     left: -0.8rem;
+     box-shadow: 0px 0px 3px #3336e0;
+ }
+ 
+}
+
+
+@media only screen and (max-width: 1100px){
+    #nav .nav-links{
+        width: 100%;
+    }
+
+    #nav .nav-links .fa-xmark{
+        margin-top: 3rem;
+        display: flex;
+        color: #1A80F8;
+        position: relative;
+        margin-left: 70%;
+    }
+
+    #nav .nav-links .fa-xmark::after{
+        content: "";
+        position: absolute;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        border: 1px solid #1A80F8;
+        top: -0.7rem;
+        left: -0.8rem;
+        box-shadow: 0px 0px 3px #3336e0;
+    }
+}
